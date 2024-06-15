@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|c:\\users\\jonat\\source\\repos\\backenddemo\\backenddemo\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|solutionrelative:backenddemo\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|c:\\users\\jonat\\source\\repos\\backenddemo\\backenddemo\\models\\databaseservicesusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|solutionrelative:backenddemo\\models\\databaseservicesusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|c:\\users\\jonat\\source\\repos\\backenddemo\\backenddemo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|solutionrelative:backenddemo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|c:\\users\\jonat\\source\\repos\\backenddemo\\backenddemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7886A6A5-D31C-43A1-A63E-1A0DE43942C8}|BackEndDemo\\BackEndDemo.csproj|solutionrelative:backenddemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Program.cs",
+              "RelativeDocumentMoniker": "BackEndDemo\\Program.cs",
+              "ToolTip": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Program.cs",
+              "RelativeToolTip": "BackEndDemo\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T17:11:29.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Models\\User.cs",
+              "RelativeDocumentMoniker": "BackEndDemo\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Models\\User.cs",
+              "RelativeToolTip": "BackEndDemo\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T13:30:53.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseServicesUsers.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Models\\DatabaseServicesUsers.cs",
+              "RelativeDocumentMoniker": "BackEndDemo\\Models\\DatabaseServicesUsers.cs",
+              "ToolTip": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Models\\DatabaseServicesUsers.cs",
+              "RelativeToolTip": "BackEndDemo\\Models\\DatabaseServicesUsers.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAcwHQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T13:30:03.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "BackEndDemo\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\jonat\\source\\repos\\BackEndDemo\\BackEndDemo\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "BackEndDemo\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAIwAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T13:28:22.558Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

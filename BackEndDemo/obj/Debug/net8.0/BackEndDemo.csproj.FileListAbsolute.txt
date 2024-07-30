@@ -36,3 +36,4 @@ C:\Users\jonat\source\repos\BackEndDemo\BackEndDemo\obj\Debug\net8.0\refint\Back
 C:\Users\jonat\source\repos\BackEndDemo\BackEndDemo\obj\Debug\net8.0\BackEndDemo.pdb
 C:\Users\jonat\source\repos\BackEndDemo\BackEndDemo\obj\Debug\net8.0\BackEndDemo.genruntimeconfig.cache
 C:\Users\jonat\source\repos\BackEndDemo\BackEndDemo\obj\Debug\net8.0\ref\BackEndDemo.dll
+C:\Users\jonat\source\repos\BackEndDemo\BackEndDemo\obj\Debug\net8.0\BackEndDemo.sourcelink.json

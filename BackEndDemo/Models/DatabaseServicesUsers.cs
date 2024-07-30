@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace BackEndDemo.Models
 {
     public class DatabaseServicesUsers
     {
-        private static readonly string sqlConnectionStr = "Data Source=DESKTOP-476LUOR\\SQLEXPRESS;Initial Catalog=FlyAndTravel;Integrated Security=True";
+        //private static readonly string sqlConnectionStr = "workstation id=TAndFSomee.mssql.somee.com;packet size=4096;user id=Yonix_SQLLogin_1;pwd=vl6fwdn3rp;data source=TAndFSomee.mssql.somee.com;persist security info=False;initial catalog=TAndFSomee;TrustServerCertificate=True";
+        private static readonly string sqlConnectionStr = "Data Source=DESKTOP-476LUOR\\SQLEXPRESS;Initial Catalog=FlyAndTravel;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         private static readonly string allUsersQuery = "SELECT * FROM Users";
         private static readonly string userByIdQuery = "SELECT * FROM Users WHERE Id = @Id";
         private static readonly string insertUserQuery = "INSERT INTO Users (First_Name, Last_Name, Mail_Address, Passwd) OUTPUT INSERTED.Id VALUES (@First_Name, @Last_Name, @Mail_Address, @Passwd)";

@@ -5,17 +5,17 @@ namespace BackEndDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class HotelController : ControllerBase
     {
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<User[]> Get()
+        public ActionResult<List<Hotel>> Get()
         {
             try
             {
-                List<User> users = DatabaseServicesUsers.GetAllUsers();
-                return Ok(users.ToArray());
+                List<Hotel> hotels = DatabaseServicesHotel.GetAllHotels();
+                return Ok(hotels);
             }
             catch (Exception e)
             {
@@ -24,17 +24,17 @@ namespace BackEndDemo.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(User))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Hotel))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int id)
         {
             try
             {
-                User user = DatabaseServicesUsers.GetUserById(id);
-                if (user == null)
-                    return NotFound($"User with id: {id} wasn't found.");
-                return Ok(user);
+                Hotel hotel = DatabaseServicesHotel.GetHotelById(id);
+                if (hotel == null)
+                    return NotFound($"Hotel with id: {id} wasn't found.");
+                return Ok(hotel);
             }
             catch (Exception e)
             {
@@ -42,49 +42,22 @@ namespace BackEndDemo.Controllers
             }
         }
 
-        [HttpPost("signUp")]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(User))]
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Hotel))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult PostSignUp([FromBody] User value)
+        public IActionResult Post([FromBody] Hotel value)
         {
             try
             {
                 if (value == null)
-                    return BadRequest("User is null.");
+                    return BadRequest("Hotel is null.");
                 if (value.Id != 0)
-                    return StatusCode(StatusCodes.Status500InternalServerError, "Cannot specify Id for new User.");
+                    return StatusCode(StatusCodes.Status500InternalServerError, "Cannot specify Id for new Hotel.");
 
-                value.Id = DatabaseServicesUsers.InsertUser(value);
+                value.Id = DatabaseServicesHotel.InsertHotel(value);
 
                 return CreatedAtAction(nameof(Get), new { id = value.Id }, value);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
-
-        [HttpPost("signIn")]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(User))]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult PostSignIn([FromBody] User value)
-        {
-            try
-            {
-                if (value == null)
-                    return BadRequest("User is null.");
-
-                User user = DatabaseServicesUsers.GetAllUsers().Find(u => u.Email == value.Email);
-
-                if (user.Password == value.Password)
-                {
-                    return Ok(user);
-                }
-                else
-                    return NotFound();
-
             }
             catch (Exception e)
             {
@@ -96,16 +69,16 @@ namespace BackEndDemo.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Put(int id, [FromBody] User value)
+        public IActionResult Put(int id, [FromBody] Hotel value)
         {
             try
             {
                 if (value == null || value.Id != id)
                     return BadRequest();
 
-                int rowsAffected = DatabaseServicesUsers.UpdateUser(value);
+                int rowsAffected = DatabaseServicesHotel.UpdateHotel(value);
                 if (rowsAffected == 0)
-                    return NotFound($"User with id: {id} wasn't found, can't update.");
+                    return NotFound($"Hotel with id: {id} wasn't found, can't update.");
 
                 return NoContent();
             }
@@ -126,9 +99,9 @@ namespace BackEndDemo.Controllers
                 if (id == 0)
                     return BadRequest();
 
-                bool isDeleted = DatabaseServicesUsers.DeleteUser(id);
+                bool isDeleted = DatabaseServicesHotel.DeleteHotel(id);
                 if (!isDeleted)
-                    return NotFound($"User with id: {id} wasn't found, can't delete.");
+                    return NotFound($"Hotel with id: {id} wasn't found, can't delete.");
 
                 return NoContent();
             }

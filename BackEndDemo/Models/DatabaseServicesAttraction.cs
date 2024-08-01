@@ -131,13 +131,11 @@ namespace BackEndDemo.Models
                 }
                 catch (SqlException sqlEx)
                 {
-                    // Log SQL errors with more details
                     Console.WriteLine($"SQL Error: {sqlEx.Message}");
                     throw new Exception("Database query error: " + sqlEx.Message, sqlEx);
                 }
                 catch (Exception ex)
                 {
-                    // Log general errors with more details
                     Console.WriteLine($"General Error: {ex.Message}");
                     throw new Exception("General error: " + ex.Message, ex);
                 }
